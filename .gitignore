@@ -1,8 +1,0 @@
-# Blacklist all
-/*
-
-# Whitelist files
-!/.gitignore
-
-# Whitelist dirs
-!/source/build/
