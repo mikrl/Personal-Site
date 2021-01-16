@@ -1,8 +1,24 @@
 div {
-  width: 300px;
+  width: 500px;
   /* border: 15px solid green; */
   padding: 50px;
   margin: 20px;
+}
+
+div.nameplate {
+    width: 100vw;
+    /* border: 15px solid green; */
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
+}
+
+div.page-content {
+    width: 100vw;
+    /* border: 15px solid green; */
+    text-align: center;
+    padding: 0px;
+    margin: 0px;
 }
 
 body {
@@ -10,20 +26,26 @@ body {
     /* border-style: solid; */
     overflow: hidden;
     margin: 0;
+    font-family: roboto, sans-serif
+}
+
+h {
+    color: #0E131F;
+    font-family: roboto, sans-serif;
 }
 
 h1 {
-    color: #0E131F;
+    /*color: #0E131F;*/
     text-align: center;
     font-size: 5vw;
-    font-family: roboto, sans-serif;
+    /*font-family: roboto, sans-serif;*/
 }
 
 h2 {
-    color: #0E131F;
+    /*color: #0E131F;*/
     text-align: center;
     font-size: 2.5vw;
-    font-family: roboto, sans-serif;
+    /*font-family: roboto, sans-serif;*/
 }
 
 p {
