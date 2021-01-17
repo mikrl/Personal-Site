@@ -1,33 +1,33 @@
+body {
+    /*background-color: #D3D4D9;*/
+    background-color: #D3D4D9;
+
+    /* border-style: solid; */
+    overflow: hidden;
+    margin: 0;
+    font-family: roboto, sans-serif
+}
+
 div {
-  width: 500px;
+    width: 25vw;
   /* border: 15px solid green; */
-  padding: 50px;
-  margin: 20px;
 }
 
 div.nameplate {
     width: 100vw;
+    padding-top:3vw;
     /* border: 15px solid green; */
     text-align: center;
-    padding: 0px;
-    margin: 0px;
+    margin: 1vw;
 }
 
 div.page-content {
     width: 100vw;
     /* border: 15px solid green; */
     text-align: center;
-    padding: 0px;
-    margin: 0px;
+    overflow-y: scroll;
 }
 
-body {
-    background-color: #D3D4D9;
-    /* border-style: solid; */
-    overflow: hidden;
-    margin: 0;
-    font-family: roboto, sans-serif
-}
 
 h {
     color: #0E131F;
@@ -37,7 +37,7 @@ h {
 h1 {
     /*color: #0E131F;*/
     text-align: center;
-    font-size: 5vw;
+    font-size: 3vw;
     /*font-family: roboto, sans-serif;*/
 }
 
@@ -64,31 +64,49 @@ ul.navbar {
 
     position: fixed;
     top: 0;
+    height: 2.5vw;
     width: 100vw;
 }
 
 li.rightalign {
+    border-left: 1px solid #bbb;
+    height: 2.5vw;
     float: right;
 }
 
 li.leftalign {
+    border-right: 1px solid #bbb;
+    height: 2.5vw;
     float: left;
 }
 
 li {
-    border-right: 1px solid #bbb;
-    border-left: 1px solid #bbb;
     display: inline;
     float: left;
+    transition: 5s;
 }
 
 li a:hover {
     background-color: #F15152;
 }
 
+.btn {
+    height:3vw;
+    text-align: center;
+    padding-bottom: 0.5vw;
+    border: none;
+}
+
+.btn:hover {
+    background-color: #F15152;
+
 a {
   display: block;
-  padding: 14px 16px;
+  padding-top: 0.25vw;
+  padding-bottom: 0.25vw;
+  padding-left: 0.5vw;
+  padding-right: 0.5vw;
+      
   text-decoration: none;
   font-size: 1.5vw;
   background-color: #6C6F7D;
