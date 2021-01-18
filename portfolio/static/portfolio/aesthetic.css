@@ -1,9 +1,8 @@
 body {
     /*background-color: #D3D4D9;*/
     background-color: #D3D4D9;
-
-    /* border-style: solid; */
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: scroll;
     margin: 0;
     font-family: roboto, sans-serif
 }
@@ -16,7 +15,6 @@ div {
 div.nameplate {
     width: 100vw;
     padding-top:3vw;
-    /* border: 15px solid green; */
     text-align: center;
     margin: 1vw;
 }
@@ -49,10 +47,14 @@ h2 {
 }
 
 p {
-  font-family: verdana;
   font-size: 2vw;
   font-family: roboto, sans-serif;
   text-align: center;
+}
+
+.footer-text {
+    font-size: 1vw;
+    text-align: right;
 }
 
 ul.navbar {
@@ -68,6 +70,12 @@ ul.navbar {
     width: 100vw;
 }
 
+li {
+    height: 4vw;
+    width: 10vw;
+    display: inline;
+}
+
 li.rightalign {
     border-left: 1px solid #bbb;
     float: right;
@@ -76,16 +84,6 @@ li.rightalign {
 li.leftalign {
     border-right: 1px solid #bbb;
     float: left;
-}
-
-li {
-    height: 4vw;
-    width: 10vw;
-    display: inline;
-}
-
-li a:hover {
-    background-color: #F15152;
 }
 
 .btn {
@@ -106,20 +104,4 @@ li a:hover {
 .btn:hover {
     background-color: #F15152;
     transition: background-color 0.3s ease-out;
-
-
-}
-
-
-
-a {
-  display: block;
-  padding-top: 0.25vw;
-  padding-bottom: 0.25vw;
-  padding-left: 0.5vw;
-  padding-right: 0.5vw;
-      
-  text-decoration: none;
-  font-size: 1.5vw;
-  background-color: #6C6F7D;
 }
