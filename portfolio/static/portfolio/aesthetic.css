@@ -4,24 +4,20 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     margin: 0;
-    font-family: roboto, sans-serif
+    font-family: HelveticaNeue, sans-serif
 }
 
 div {
-    width: 25vw;
-  /* border: 15px solid green; */
+    width: 100vw;
 }
 
 div.nameplate {
-    width: 100vw;
     padding-top:3vw;
     text-align: center;
     margin: 1vw;
 }
 
 div.page-content {
-    width: 100vw;
-    /* border: 15px solid green; */
     text-align: center;
     overflow-y: scroll;
 }
@@ -29,26 +25,24 @@ div.page-content {
 
 h {
     color: #0E131F;
-    font-family: roboto, sans-serif;
+    font-family: HelveticaNeue, sans-serif;
 }
 
 h1 {
     /*color: #0E131F;*/
     text-align: center;
     font-size: 3vw;
-    /*font-family: roboto, sans-serif;*/
 }
 
 h2 {
     /*color: #0E131F;*/
     text-align: center;
     font-size: 2.5vw;
-    /*font-family: roboto, sans-serif;*/
 }
 
 p {
   font-size: 2vw;
-  font-family: roboto, sans-serif;
+  font-family: helvetica, sans-serif;
   text-align: center;
 }
 
@@ -73,7 +67,6 @@ ul.navbar {
 li {
     height: 4vw;
     width: 10vw;
-    display: inline;
 }
 
 li.rightalign {
@@ -91,10 +84,10 @@ li.leftalign {
     height:4vw;
     width: 10vw;
     text-align: center;
-    padding-bottom: 0.5vw;
     border: none;
-    font-size: 2vw;
+    font-size: 1.7vw;
     font-weight: bold;
+    font-family: HelveticaNeue, sans-serif;
     color: #0E131F;
     background-color: #6C6F7D;
     transition: background-color 0.3s ease-out;
