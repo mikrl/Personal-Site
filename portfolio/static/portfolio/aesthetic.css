@@ -64,26 +64,24 @@ ul.navbar {
 
     position: fixed;
     top: 0;
-    height: 2.5vw;
+    height: 4vw;
     width: 100vw;
 }
 
 li.rightalign {
     border-left: 1px solid #bbb;
-    height: 2.5vw;
     float: right;
 }
 
 li.leftalign {
     border-right: 1px solid #bbb;
-    height: 2.5vw;
     float: left;
 }
 
 li {
+    height: 4vw;
+    width: 10vw;
     display: inline;
-    float: left;
-    transition: 5s;
 }
 
 li a:hover {
@@ -91,14 +89,28 @@ li a:hover {
 }
 
 .btn {
-    height:3vw;
+    display: block;
+    height:4vw;
+    width: 10vw;
     text-align: center;
     padding-bottom: 0.5vw;
     border: none;
+    font-size: 2vw;
+    font-weight: bold;
+    color: #0E131F;
+    background-color: #6C6F7D;
+    transition: background-color 0.3s ease-out;
+
 }
 
 .btn:hover {
     background-color: #F15152;
+    transition: background-color 0.3s ease-out;
+
+
+}
+
+
 
 a {
   display: block;
