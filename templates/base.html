@@ -1,0 +1,32 @@
+{% load static %} 
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+	<title>Michael K. Lynch</title>
+	<link rel="stylesheet" href="{%  static 'aesthetic.css' %}">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    </head>
+    <body>
+      <!-- Navigation -->
+      <div class="nav-wrapper">
+          <!--<ul id="horizontal-list"> -->
+	  <ul class="navbar">
+	      <!-- Left aligned elements-->
+	      <li class="leftalign"><button class="btn">About</button></li>
+	      <li class="leftalign"><button class="btn" href="{% url 'home' %}">Projects</button></li>
+	      <li class="leftalign"><button class="btn">Certs</button></li>
+	  <!-- Right aligned elements-->
+	  <li class="rightalign"><button class="btn">Contact</button></li>
+	</ul>
+      </div>
+      <!-- Content -->
+      {% block content %}
+      
+      {% endblock content %}
+    </body>
+    <!-- Footer -->
+  <footer>
+      <p class="footer-text">2021</p>
+  </footer> 
+</html>
+

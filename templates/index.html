@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="nameplate">	  
+  <h1>Michael K. Lynch</h1>
+  <h2>Page under construction</h2>	  
+</div>
+<div class="container">
+    <div class="row">
+        <!-- Project Entries Column -->	
+        {% for project in project_list %}
+        <h2 class="card-title">{{ project.title }}</h2>
+        <p class="card-text">{{project.content|slice:":200" }}</p>
+        <a href="{% url 'project_detail' project.slug  %}" class="btn btn-primary">Read More4 &rarr;</a>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

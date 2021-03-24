@@ -1,5 +1,24 @@
-from django.shortcuts import render
+from django.views import generic
+from .models import Project
 
-# Create your views here.
-def portfolio_page(request):
-    return render(request, "portfolio.html", {})
+class ProjectList(generic.ListView):
+    queryset = Project.objects.filter(status__gte=1)
+    template_name = 'index.html'
+
+class ProjectDetail(generic.DetailView):
+    model = Project
+    template_name = 'project_detail.html'
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
