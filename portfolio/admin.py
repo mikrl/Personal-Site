@@ -3,7 +3,7 @@ from .models import Project
 # Register your models here.
 
 class ProjectAdmin(admin.ModelAdmin):
-    list_display = ('title', 'slug', 'status')
+    list_display = ('title', 'modified_date', 'slug', 'status')
     list_filter = ("status",)
     search_fields = ['title', 'content']
     prepopulated_fields = {'slug': ('title',)}

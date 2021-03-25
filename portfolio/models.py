@@ -16,6 +16,9 @@ class Project(BaseModel):
     content = models.TextField()    
     status = models.IntegerField(choices=STATUS)
     url = models.URLField()
+
+    class Meta:
+        ordering = ['-modified_date']
     
     def __str__(self):
         return self.title
