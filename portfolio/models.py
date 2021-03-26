@@ -3,14 +3,12 @@ from django.contrib.auth.models import User
 
 from utilities.models import BaseModel
 
-STATUS = (
-    (0, "Planning"),
-    (1, "Development"),
-    (2, "Maintaining")
-)
-
-# Create your models here.
 class Project(BaseModel):
+    STATUS = (
+        (0, "Planning"),
+        (1, "Development"),
+        (2, "Maintaining"),
+    )
     title = models.CharField(max_length=200, unique=True)
     slug = models.SlugField(max_length=200, unique=True)
     content = models.TextField()    
@@ -23,5 +21,28 @@ class Project(BaseModel):
     def __str__(self):
         return self.title
 
+class Certification(models.Model):
+    LEVEL = (
+        (0, "Beginner"),
+        (1, "Intermediate"),
+        (2, "Advanced"),
+    )
+    name = models.CharField(max_length=50, unique=True)
+    icon = models.ImageField()
+    expiration_date = models.DateField(blank=True)
+    url = models.URLField()
+    level = models.IntegerField(choices=LEVEL)
 
-
+    class Meta:
+        ordering = ['-level']
+    
+    def expires(self):
+        """
+        Whether the certification expires or not.
+        """
+        if self.expiration_date:
+            return True
+        return False
+    
+    def __str__(self):
+        return self.name
