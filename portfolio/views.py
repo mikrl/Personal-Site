@@ -6,7 +6,7 @@ from .models import Certification
 
 
 class Homepage (generic.TemplateView):
-    template_name = 'index.html'
+    template_name = 'index.bootstrap.html'
 
 class ProjectList(generic.ListView):
     queryset = Project.objects.filter(status__gte=1)
