@@ -17,6 +17,7 @@ class ProjectDetail(generic.DetailView):
     template_name = 'project_detail.html'
 
 class CertificationList(generic.ListView):
+    #breakpoint()
     queryset = Certification.objects.all()
     template_name = 'certifications.html'
 

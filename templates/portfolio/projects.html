@@ -6,7 +6,7 @@
         {% for project in project_list %}
         <h2 class="card-title">{{ project.title }}</h2>
         <p class="card-text">{{project.content|slice:":200" }}</p>
-        <a href="{% url 'project_detail' project.slug  %}" class="btn btn-primary">Read More &rarr;</a>
+        <a href="{% url 'portfolio:project_detail' project.slug  %}" class="btn btn-primary">Read More &rarr;</a>
     </div>
     {% endfor %}
 </div>
