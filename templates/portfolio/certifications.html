@@ -1,7 +1,15 @@
 {% extends "base.html" %}
 {% block content %}
 <div class="container">
-  Certs go here...
-
+  <div class="row">
+    {% for cert in certification_list %}
+    <div class="card" style="width: 18rem;">
+      <img src="{{ post.img.url }}" class="card-img-top" alt="Certification Icon">
+      <div class="card-body">
+	<h5 class="card-title">{{ cert.name }}</h5>
+	<a href="{{ cert.url }}" class="btn btn-primary">Validate</a>
+      </div>
+    </div>
+    {% endfor %}
 </div>
 {% endblock %}

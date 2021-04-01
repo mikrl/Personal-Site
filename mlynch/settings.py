@@ -17,6 +17,10 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATE_BASE = os.path.join(BASE_DIR, 'templates')
 TEMPLATE_DIRS = [TEMPLATE_BASE, os.path.join(TEMPLATE_BASE, 'portfolio')]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
