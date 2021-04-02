@@ -1,0 +1,46 @@
+#page {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 80px auto auto 40px;
+    grid-template-areas:
+	"header header header"
+	"content content content"
+	"content content content"
+	"footer footer footer";    
+}
+
+#page > header {
+    grid-area: header;
+    background-color: #6C6F7D;
+}
+
+
+#page > footer {
+    grid-area: footer;
+    background-color: #6C6F7D;
+}
+
+.about-bio {
+    grid-column: 1 / 2;
+    grid-row: 2/4;
+}
+
+.about-pic {
+
+}
+
+.about-updates {
+
+}
+
+.project-nav {
+
+}
+
+.project-details {
+    
+}
+
+.cert-grid {
+    
+}
