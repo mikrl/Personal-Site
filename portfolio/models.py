@@ -28,7 +28,7 @@ class Certification(models.Model):
         (2, "Advanced"),
     )
     name = models.CharField(max_length=50, unique=True)
-    icon = models.ImageField()
+    badge = models.ImageField(blank=True, upload_to='certs')
     expiration_date = models.DateField(blank=True)
     url = models.URLField()
     level = models.IntegerField(choices=LEVEL)
