@@ -3,6 +3,20 @@ from django.contrib.auth.models import User
 
 from utilities.models import BaseModel
 
+
+class Statement(BaseModel):
+    content = models.TextField()
+
+        
+
+
+class ImageLink(BaseModel):
+    image = models.ImageField(upload_to='main')
+    alttext = models.TextField()
+
+
+    
+    
 class Project(BaseModel):
     STATUS = (
         (0, "Planning"),
@@ -21,6 +35,10 @@ class Project(BaseModel):
     def __str__(self):
         return self.title
 
+
+class ProjectLink(BaseModel):
+    models.ForeignKey(Project, on_delete=models.CASCADE)
+    
 class Certification(models.Model):
     LEVEL = (
         (0, "Beginner"),
