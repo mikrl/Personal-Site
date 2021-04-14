@@ -1,12 +1,18 @@
+from typing import List, Union
+
 from django.views import generic
 
+from .models import Statement
 from .models import Project
 from .models import Certification
 
 
 
-class Homepage (generic.TemplateView):
-    template_name = 'index.bootstrap.html'
+class FrontPage (generic.TemplateView):
+    queryset_statements = Statement.objects.all()
+    # queryset_imagelinks = ImageLink.objects.all()
+    # queryset = blend(queryset_statements, queryset_imagelinks)
+    template_name = 'index.bootstrap.html'    
 
 class ProjectList(generic.ListView):
     queryset = Project.objects.filter(status__gte=1)

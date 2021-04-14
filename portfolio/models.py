@@ -6,17 +6,13 @@ from utilities.models import BaseModel
 
 class Statement(BaseModel):
     content = models.TextField()
-
+    url_info = models.URLField(blank=True)
+    
         
-
-
-class ImageLink(BaseModel):
-    image = models.ImageField(upload_to='main')
-    alttext = models.TextField()
-
-
-    
-    
+# class ImageLink(BaseModel):
+#     image = models.ImageField(upload_to='main')
+#     alttext = models.TextField()
+        
 class Project(BaseModel):
     STATUS = (
         (0, "Planning"),
@@ -36,9 +32,6 @@ class Project(BaseModel):
         return self.title
 
 
-class ProjectLink(BaseModel):
-    models.ForeignKey(Project, on_delete=models.CASCADE)
-    
 class Certification(models.Model):
     LEVEL = (
         (0, "Beginner"),
