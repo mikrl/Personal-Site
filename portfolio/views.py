@@ -8,11 +8,11 @@ from .models import Certification
 
 
 
-class FrontPage (generic.TemplateView):
-    queryset_statements = Statement.objects.all()
+class StatementList (generic.ListView):    
     # queryset_imagelinks = ImageLink.objects.all()
     # queryset = blend(queryset_statements, queryset_imagelinks)
-    template_name = 'index.bootstrap.html'    
+    queryset = Statement.objects.all()
+    template_name = 'statements.html'    
 
 class ProjectList(generic.ListView):
     queryset = Project.objects.filter(status__gte=1)
@@ -26,12 +26,6 @@ class CertificationList(generic.ListView):
     #breakpoint()
     queryset = Certification.objects.all()
     template_name = 'certifications.html'
-
-class CertificationDetail(generic.DetailView):
-    model = Certification
-    template_name = 'certification_detail.html'
-    
-
 
 
 

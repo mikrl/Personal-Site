@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4">Michael K. Lynch</h1>
+    <p class="lead">Page under construction.</p>
+  </div>
+      </div>
+
+  <div class="container">
+    <div class="row">
+        <!-- Statement Entries Column -->	
+	{% for statement in statement_list %}
+	<div class="card" style="width: 36rem;">
+	  <div class="card-body">
+	    <p class="card-text">{{ statement.content }}</p>
+	  </div>
+	</div>
+	{% endfor %}	
+</div>
+{% endblock %}
+    

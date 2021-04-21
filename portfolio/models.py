@@ -5,6 +5,7 @@ from utilities.models import BaseModel
 
 
 class Statement(BaseModel):
+    title = models.CharField(max_length=40)
     content = models.TextField()
     url_info = models.URLField(blank=True)
     

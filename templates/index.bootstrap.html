@@ -7,4 +7,15 @@
     <p class="lead">Page under construction.</p>
   </div>
 </div>
+<p>Pre statement</p>
+{% for statement in statements %}
+<p>In statement loop</p>
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <p class="card-text">{{ statement.content }}</p>
+  </div>
+</div>
+{% endfor %}
+<p>Post statement</p>
 {% endblock %}
+
